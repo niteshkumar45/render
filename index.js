@@ -14,9 +14,11 @@ const userschema = new mongoose.Schema({
     city:String
 })
 
+app.set("view engine","ejs")
+
 const usermodel = new mongoose.model("User",userschema)
 app.get("/",(req,res)=>{
-    res.status(201).send("this is home page")
+    res.render('index')
 })
 
 app.get("/about",(req,res)=>{
