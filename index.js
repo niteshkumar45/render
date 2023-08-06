@@ -7,6 +7,10 @@ app.get("/",(req,res)=>{
     res.status(201).send("this is home page")
 })
 
+app.get("/about",(req,res)=>{
+    res.status(201).send("this is about page")
+})
+
 app.listen(PORT,()=>{
     console.log(`the server is running on ${PORT}`);
 })
