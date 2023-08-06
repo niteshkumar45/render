@@ -15,6 +15,7 @@ const userschema = new mongoose.Schema({
 })
 
 app.set("view engine","ejs")
+app.use(express.static("public"))
 
 const usermodel = new mongoose.model("User",userschema)
 app.get("/",(req,res)=>{
